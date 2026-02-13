@@ -10,6 +10,21 @@ body {
   align-items: center;
 }
 
+/* Background glowing name */
+.bg-name {
+  position: fixed;
+  font-size: 80px;
+  color: rgba(255, 105, 180, 0.08);
+  top: 40%;
+  z-index: 0;
+  animation: glowName 4s infinite alternate;
+}
+
+@keyframes glowName {
+  from { text-shadow: 0 0 10px pink; }
+  to { text-shadow: 0 0 40px hotpink; }
+}
+
 #intro-screen {
   position: fixed;
   inset: 0;
@@ -40,10 +55,7 @@ body {
   50% { border-color: transparent }
 }
 
-#envelope-container {
-  display: none;
-  text-align: center;
-}
+#envelope-container { display:none; }
 
 #envelope {
   width: 220px;
@@ -58,11 +70,11 @@ body {
 }
 
 #letter-container {
-  display: none;
-  position: fixed;
-  inset: 0;
-  justify-content: center;
-  align-items: center;
+  display:none;
+  position:fixed;
+  inset:0;
+  justify-content:center;
+  align-items:center;
 }
 
 .letter-window {
@@ -73,11 +85,12 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  padding-top: 180px;
+  padding-top: 160px;
   text-align: center;
   transform: scale(0.5);
   opacity: 0;
   transition: 0.8s ease;
+  z-index: 2;
 }
 
 .letter-window.open {
@@ -85,32 +98,39 @@ body {
   opacity: 1;
 }
 
-.cat {
-  width: 240px;
-  transition: 0.4s ease;
-}
+.cat { width:240px; }
 
 .buttons {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
+  display:flex;
+  justify-content:center;
+  gap:40px;
 }
 
-.btn {
-  width: 120px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
+.btn { width:120px; cursor:pointer; }
 
-.no-btn {
-  position: relative;
-}
+.no-btn { position:relative; }
 
 .final-text {
-  display: none;
-  font-size: 22px;
-  margin-top: 10px;
+  display:none;
+  font-size:22px;
   background: rgba(255,255,255,0.7);
-  padding: 10px 20px;
-  border-radius: 12px;
+  padding:10px 20px;
+  border-radius:12px;
+  margin-top:10px;
+}
+
+.counter {
+  font-size:18px;
+  margin-bottom:10px;
+  color:#c2185b;
+}
+
+.secret-box {
+  margin-top:15px;
+}
+
+.secret-box input {
+  padding:5px;
+  border-radius:8px;
+  border:1px solid pink;
 }
