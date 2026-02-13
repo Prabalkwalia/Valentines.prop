@@ -62,9 +62,9 @@ function unlockSecret() {
   const input = document.getElementById("secretInput").value;
   if (input.toLowerCase() === "pumpkin") {
     document.getElementById("secretMessage").innerText =
-      "You unlocked my heart. I love you endlessly. 🫂💖";
+      "You unlocked my heart. I love you ms.bauni baddieeeeeeee. 🫂💖";
   } else {
     document.getElementById("secretMessage").innerText =
-      "Hmm… try again, love 😌";
+      "Hmm… try again, dumbbbbbooooo 😌";
   }
 }
