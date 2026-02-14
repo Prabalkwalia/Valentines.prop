@@ -14,7 +14,7 @@ const music = document.getElementById("bgMusic");
 const heartbeat = document.getElementById("heartbeat");
 
 /* CHANGE THIS DATE */
-const startDate = new Date("2024-04-29");
+const startDate = new Date("2025-04-29");
 
 /* Counter */
 function updateCounter() {
@@ -90,7 +90,7 @@ noBtn.addEventListener("mouseover", () => {
 function unlockSecret() {
   const input = document.getElementById("secretInput").value.toLowerCase();
 
-  if (input === "forever") {
+  if (input === "bauni") {
     const overlay = document.getElementById("romanticOverlay");
     overlay.style.display = "flex";
     setTimeout(() => overlay.style.opacity = "1", 50);
