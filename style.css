@@ -204,3 +204,32 @@ body::before {
   .btn { width:80px; }
   .polaroid { width:100px; }
 }
+/* ---------------- LOVE EXPLOSION ---------------- */
+
+.love-explosion span {
+  position: fixed;
+  font-size: 28px;
+  animation: explodeFloat 4s ease forwards;
+  pointer-events: none;
+  z-index: 200;
+}
+
+@keyframes explodeFloat {
+  0% {
+    transform: scale(0.5) translateY(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2) translateY(-200px);
+    opacity: 0;
+  }
+}
+
+/* Shift page upward when explosion happens */
+.shift-up {
+  transform: translateY(-20px);
+  transition: transform 1s ease;
+}
