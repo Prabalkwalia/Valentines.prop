@@ -14,7 +14,7 @@ const music = document.getElementById("bgMusic");
 const heartbeat = document.getElementById("heartbeat");
 
 /* CHANGE THIS DATE */
-const startDate = new Date("2024-06-01");
+const startDate = new Date("2024-04-29");
 
 /* Counter */
 function updateCounter() {
@@ -121,6 +121,12 @@ function unlockSecret() {
     }, 2500);
 
     createParticles();
+    createLoveExplosion();
+
+/* Shift everything slightly upward */
+document.querySelector(".letter-window").classList.add("shift-up");
+document.querySelector(".bg-name").classList.add("shift-up");
+
   }
 }
 
@@ -155,5 +161,26 @@ function createParticles() {
     heart.style.left = Math.random() * 100 + "vw";
     heart.style.animationDelay = Math.random() * 5 + "s";
     container.appendChild(heart);
+  }
+}
+function createLoveExplosion() {
+
+  const emojis = ["💖","🤍","✨","💘","💞","🥹","🌸"];
+
+  for (let i = 0; i < 60; i++) {
+
+    const span = document.createElement("span");
+    span.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+
+    span.style.left = Math.random() * 100 + "vw";
+    span.style.top = Math.random() * 100 + "vh";
+
+    span.classList.add("love-explosion");
+
+    document.body.appendChild(span);
+
+    setTimeout(() => {
+      span.remove();
+    }, 4000);
   }
 }
